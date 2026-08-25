@@ -18,7 +18,10 @@ export type Option = { value: string; label: string }
 function join(base: string, note: string): string {
   const trimmed = note.trim()
   if (!trimmed) return base
-  if (base.toLowerCase().includes(trimmed.toLowerCase())) return base
+  const baseLower = base.toLowerCase()
+  const noteLower = trimmed.toLowerCase()
+  if (baseLower.includes(noteLower)) return base
+  if (noteLower.includes(baseLower)) return trimmed
   return `${base} ${trimmed}`
 }
 

@@ -22,25 +22,25 @@
   background: var(--paper-raised);
   color: var(--ink);
   box-shadow: var(--shadow);
-  padding: 12mm 13mm 11mm;
+  padding: 10mm 12mm 8mm;
   display: flex;
   flex-direction: column;
-  gap: 6.5mm;
-  font-size: 10.2pt;
-  line-height: 1.28;
+  gap: 3.6mm;
+  font-size: 9.3pt;
+  line-height: 1.25;
 }
 
 .doc-top {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  border-bottom: 2.5px solid var(--ink);
-  padding-bottom: 3.5mm;
+  border-bottom: 2px solid var(--ink);
+  padding-bottom: 2.4mm;
 }
 
 .doc-brand {
   font-family: var(--serif);
-  font-size: 16pt;
+  font-size: 15pt;
   line-height: 1;
 }
 
@@ -67,11 +67,11 @@
 .doc-who {
   display: grid;
   grid-template-columns: 1.3fr 1fr;
-  gap: 8mm;
+  gap: 6mm;
 }
 
 .doc-name {
-  font-size: 22pt;
+  font-size: 20pt;
   line-height: 1.02;
   margin: 0.5mm 0;
 }
@@ -89,8 +89,8 @@
 
 .doc-title {
   font-family: var(--serif);
-  font-size: 13.5pt;
-  padding-bottom: 3mm;
+  font-size: 12.5pt;
+  padding-bottom: 2.2mm;
   border-bottom: 1px solid var(--rule);
 }
 
@@ -102,7 +102,7 @@
 }
 
 .doc-triad section {
-  padding: 3.5mm 4mm 4mm;
+  padding: 2.6mm 3.2mm 2.8mm;
 }
 
 .doc-triad section + section {
@@ -123,8 +123,7 @@
 
 .doc-lead {
   font-family: var(--serif);
-  font-size: 13pt;
-  line-height: 1.15;
+  font-size: 12pt;
   margin-bottom: 1mm;
 }
 
@@ -135,6 +134,7 @@
 
 .doc-rider {
   flex: 1;
+  min-height: 0;
 }
 
 .doc-rider ul {
@@ -149,7 +149,7 @@
 }
 
 .doc-rider li {
-  padding: 2.6mm 3.2mm 3mm;
+  padding: 2mm 2.8mm 2.3mm;
   border-right: 1px solid var(--rule);
   border-bottom: 1px solid var(--rule);
 }
@@ -169,13 +169,13 @@
 
 .doc-rider-need {
   color: var(--ink-soft);
-  font-size: 8.6pt;
+  font-size: 8pt;
   margin-bottom: 1.2mm;
 }
 
 .doc-rider-ans {
   font-weight: 650;
-  font-size: 9.2pt;
+  font-size: 8.6pt;
 }
 
 .doc-rider-ans.is-yes {
@@ -199,8 +199,13 @@
   font-size: 8.8pt;
 }
 
+.doc-sign,
+.doc-foot {
+  flex-shrink: 0;
+}
+
 .doc-sign-lede {
-  margin-bottom: 3mm;
+  margin-bottom: 2mm;
 }
 
 .doc-sign-grid {
@@ -210,16 +215,16 @@
 }
 
 .sign-line {
-  min-height: 9mm;
+  min-height: 6.5mm;
   border-bottom: 1px solid var(--ink);
   font-family: var(--serif);
-  font-size: 12pt;
-  margin: 1.5mm 0 1mm;
+  font-size: 11pt;
+  margin: 1mm 0 0.8mm;
 }
 
 .doc-foot {
   border-top: 1px solid var(--ink);
-  padding-top: 2.5mm;
+  padding-top: 2mm;
   display: flex;
   justify-content: space-between;
   gap: 4mm;

@@ -117,11 +117,6 @@ export function ConformeDoc({ conforme }: Props) {
             <span className="micro">Also</span> {talent.otherNotes}
           </p>
         ) : null}
-        {client.hoursNote.trim() && !talent.hardStopNote.includes(client.hoursNote) ? (
-          <p className="doc-extra">
-            <span className="micro">Hours</span> {client.hoursNote}
-          </p>
-        ) : null}
       </section>
 
       <section className="doc-sign">

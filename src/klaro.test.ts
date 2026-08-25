@@ -61,5 +61,8 @@ describe('rider copy', () => {
       'Is there restroom access within a short walk of set?',
     )
     expect(clientQuestion('hours', talent)).toContain('10-hour day')
+    const restroom = talentStatement('restroom', talent)
+    expect(restroom.match(/required/gi)?.length).toBe(1)
+    expect(restroom).toContain('Confirm on the call sheet')
   })
 })
