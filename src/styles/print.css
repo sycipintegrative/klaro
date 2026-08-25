@@ -1,0 +1,31 @@
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  body {
+    background: #fff;
+  }
+
+  .no-print,
+  .site-header,
+  .skip-link {
+    display: none !important;
+  }
+
+  .conforme-shell,
+  .conforme-stage {
+    padding: 0;
+    margin: 0;
+    display: block;
+  }
+
+  .conforme-doc {
+    box-shadow: none;
+    width: 210mm;
+    height: 297mm;
+    page-break-after: avoid;
+    break-inside: avoid;
+  }
+}
