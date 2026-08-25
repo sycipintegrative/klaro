@@ -1,8 +1,11 @@
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { DonateModal } from '../components/DonateModal'
 import { hasSavedTalent } from '../storage'
 
 export function HomePage() {
   const resume = hasSavedTalent()
+  const [donateOpen, setDonateOpen] = useState(false)
 
   return (
     <div className="home">
@@ -14,6 +17,9 @@ export function HomePage() {
         <nav aria-label="Primary">
           <Link to="/terms">Create terms</Link>
           <Link to="/conforme?sample=1">Sample conforme</Link>
+          <button type="button" className="text-btn" onClick={() => setDonateOpen(true)}>
+            Donate
+          </button>
         </nav>
       </header>
       <main id="main" className="home-hero">
@@ -22,6 +28,7 @@ export function HomePage() {
         <p className="home-lead">
           Freelancers set the fee, hours, and working conditions. Production fills the job and answers the
           rider. The output is a conforme — a working agreement, not a chat thread and not a medical form.
+          Klaro is free.
         </p>
         <div className="home-cta">
           <Link className="btn btn-primary" to="/terms?from=blank">
@@ -63,6 +70,7 @@ export function HomePage() {
           <Link to="/conforme?sample=1">View sample conforme</Link>
         </p>
       </main>
+      <DonateModal open={donateOpen} onClose={() => setDonateOpen(false)} />
     </div>
   )
 }

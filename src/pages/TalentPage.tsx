@@ -9,6 +9,7 @@ import { useDebounced } from '../hooks/useDebounced'
 import { blankTalent } from '../defaults'
 import { sampleTalent } from '../sample'
 import { hasSavedTalent, loadActiveTalent, saveTalent } from '../storage'
+import { DonateModal } from '../components/DonateModal'
 import { TALENT_SECTIONS, type TalentTerms } from '../types'
 
 function missingTalent(talent: TalentTerms): string[] {
@@ -35,6 +36,8 @@ export function TalentPage() {
 function TalentEditor({ from }: { from: string | null }) {
   const [talent, setTalent] = useState<TalentTerms>(() => startTalent(from))
   const [copied, setCopied] = useState(false)
+  const [donateOpen, setDonateOpen] = useState(false)
+  const [linkSent, setLinkSent] = useState(false)
   const [activeSection, setActiveSection] = useState('you')
   const [pane, setPane] = useState<'edit' | 'preview'>('edit')
   const debounced = useDebounced(talent, 350)
@@ -68,15 +71,17 @@ function TalentEditor({ from }: { from: string | null }) {
     try {
       await navigator.clipboard.writeText(link)
       setCopied(true)
+      setLinkSent(true)
       window.setTimeout(() => setCopied(false), 2000)
     } catch {
+      setLinkSent(true)
       window.prompt('Copy this client link', link)
     }
   }
 
   return (
     <div className="app-shell">
-      <SiteHeader kicker="Talent terms" />
+      <SiteHeader kicker="Talent terms" showDonate onDonate={() => setDonateOpen(true)} />
       <div className="editor-top no-print">
         <SectionNav sections={TALENT_SECTIONS} activeId={activeSection} />
         <div className="editor-actions">
@@ -91,6 +96,14 @@ function TalentEditor({ from }: { from: string | null }) {
           </Link>
         </div>
       </div>
+      {linkSent ? (
+        <p className="inline-note is-ok no-print">
+          If a booking lands, you can donate.{' '}
+          <button type="button" className="text-btn" onClick={() => setDonateOpen(true)}>
+            Show QR
+          </button>
+        </p>
+      ) : null}
       {gaps.length > 0 ? (
         <p className="inline-note no-print">
           You can send this now. Still empty: {gaps.join(', ')}. Nothing is blocked at the end.
@@ -119,6 +132,7 @@ function TalentEditor({ from }: { from: string | null }) {
         <Link to="/terms?from=sample">Start from sample</Link>
         {hasSavedTalent() ? <span>Last edit stays on this browser until you clear it.</span> : null}
       </div>
+      <DonateModal open={donateOpen} onClose={() => setDonateOpen(false)} />
     </div>
   )
 }

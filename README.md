@@ -45,3 +45,11 @@ npm run preview
 The sample talent is **Jordan Cruz**, on-camera, with a ₱18,000 fee and a production-world rider. The sample client is **Tala Production House for SM Lifestyle** filling a Makati stills shoot and answering every rider question.
 
 Use **Start from sample**, **Try the sample as a client**, or **View sample conforme** from the home page.
+
+## Donate
+
+Klaro is free. There is no paywall.
+
+Talent can open **Donate** from the home page or after copying a client link. That shows a QR meant for GCash or Maya. Production never sees it — the QR is not on the client form and not on the printed/PDF conforme.
+
+Replace the placeholder image at `public/donate-qr.png` with the real GCash or Maya QR. Keep the filename the same.

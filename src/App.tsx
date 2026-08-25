@@ -1,6 +1,7 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
 import { ClientPage } from './pages/ClientPage'
 import { ConformePage } from './pages/ConformePage'
+import { DonatePage } from './pages/DonatePage'
 import { HomePage } from './pages/HomePage'
 import { TalentPage } from './pages/TalentPage'
 
@@ -12,6 +13,7 @@ export default function App() {
       <Route path="/new" element={<Navigate to="/terms" replace />} />
       <Route path="/c" element={<ClientPage />} />
       <Route path="/conforme" element={<ConformePage />} />
+      <Route path="/donate" element={<DonatePage />} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   )
