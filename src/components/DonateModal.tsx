@@ -29,7 +29,7 @@ export function DonateModal({ open, onClose }: Props) {
     >
       <div className="donate-dialog-inner">
         <h2 id={titleId}>Donate</h2>
-        <p className="donate-lede">Klaro has no paywall. A scan is enough — GCash or Maya, when you replace the placeholder QR.</p>
+        <p className="donate-lede">Klaro has no paywall. Scan to donate via GCash or Maya.</p>
         <DonatePanel />
         <button type="button" className="btn btn-ghost" onClick={onClose}>
           Close
