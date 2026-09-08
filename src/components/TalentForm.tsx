@@ -305,7 +305,7 @@ export function TalentForm({ talent, onChange }: Props) {
           <span>05</span> Send
         </h2>
         <p className="lede">
-          Optional name and date on your terms. Production countersigns on the conforme after they fill the job.
+          Optional name and date. Production countersigns on the conforme after they fill the job.
         </p>
         <div className="grid-2">
           <TextField
@@ -324,7 +324,8 @@ export function TalentForm({ talent, onChange }: Props) {
           />
         </div>
         <p className="field-hint">
-          Next: copy the client link. They will add production name, location, call time, and answer the rider.
+          Copy the client link. Fee, hours, and rider go over in black and white — they add production name,
+          location, call time, and answers.
         </p>
       </section>
 

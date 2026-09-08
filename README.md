@@ -33,7 +33,7 @@ npm run preview
 
 ## Type
 
-The UI is **Aileron** (Sora Sagano, CC0), self-hosted as woff2 under `public/fonts/` (light 300, regular 400, bold 700). `@font-face` lives in `src/styles/fonts.css`. Bold is for headlines, key labels, talent name, and the conforme title; regular/light for body.
+The UI is **black and white** — white paper, near-black ink, hairline rules, no brand color. Type is **Aileron** (Sora Sagano, CC0), self-hosted as woff2 under `public/fonts/` (light 300, regular 400, bold 700). `@font-face` lives in `src/styles/fonts.css`, with 400/700 preloaded in `index.html`. Bold is for headlines, key labels, talent name, and the conforme title; regular/light for body. Helvetica/Arial are fallbacks only.
 
 ## Routes
 

@@ -98,6 +98,7 @@ function TalentEditor({ from }: { from: string | null }) {
       </div>
       {linkSent ? (
         <p className="inline-note is-ok no-print">
+          Link copied. Fee, hours, and rider — in black and white for production.{' '}
           If a booking lands, you can donate.{' '}
           <button type="button" className="text-btn" onClick={() => setDonateOpen(true)}>
             Show QR
@@ -109,7 +110,10 @@ function TalentEditor({ from }: { from: string | null }) {
           You can send this now. Still empty: {gaps.join(', ')}. Nothing is blocked at the end.
         </p>
       ) : (
-        <p className="inline-note is-ok no-print">Ready to send. Production fills location, dates, and the rider.</p>
+        <p className="inline-note is-ok no-print">
+          Ready to send. Fee, hours, and rider — in black and white. Production fills location, dates, and
+          answers.
+        </p>
       )}
       <div className="pane-toggle no-print" role="tablist" aria-label="Edit or preview">
         <button type="button" role="tab" aria-selected={pane === 'edit'} onClick={() => setPane('edit')}>

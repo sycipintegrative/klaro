@@ -24,11 +24,10 @@ export function HomePage() {
       </header>
       <main id="main" className="home-hero">
         <p className="eyebrow">Philippine production · booking + rider</p>
-        <h1>Clear terms. One-page conforme. Before call time.</h1>
+        <h1>Everything in black and white.</h1>
         <p className="home-lead">
-          Freelancers set the fee, hours, and working conditions. Production fills the job and answers the
-          rider. The output is a conforme — a working agreement, not a chat thread and not a medical form.
-          Klaro is free.
+          Fee, hours, and rider — stated plainly. Production fills the job. The output is a one-page
+          conforme, before call time. Klaro is free.
         </p>
         <div className="home-cta">
           <Link className="btn btn-primary" to="/terms?from=blank">
@@ -46,10 +45,10 @@ export function HomePage() {
         <div className="home-split">
           <section>
             <p className="micro">Talent</p>
-            <h2>You write what you need.</h2>
+            <h2>You write the terms.</h2>
             <p>
               Name, role, ₱ fee, payment, overtime, day cap, and the rider: restroom, holding room, food,
-              water, assistant. Location and call time stay off this form — those are production’s to fill.
+              water, assistant. Location and call time stay off this form — production fills those.
             </p>
           </section>
           <section>
