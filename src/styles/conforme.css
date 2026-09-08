@@ -19,9 +19,9 @@
   width: 210mm;
   height: 297mm;
   overflow: hidden;
-  background: var(--paper-raised);
+  background: #ffffff;
   color: var(--ink);
-  border: var(--hair);
+  border: 1px solid var(--ink);
   box-shadow: var(--shadow-sheet);
   padding: 10mm 12mm 8mm;
   display: flex;
@@ -29,6 +29,7 @@
   gap: 2.8mm;
   font-size: 9.2pt;
   line-height: 1.28;
+  font-weight: 400;
 }
 
 .doc-top {
@@ -40,22 +41,24 @@
 }
 
 .doc-brand {
-  font-family: var(--serif);
+  font-family: var(--sans);
+  font-weight: 700;
   font-size: 15pt;
   line-height: 1;
+  letter-spacing: -0.03em;
 }
 
 .doc-sub {
-  letter-spacing: 0.16em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  font-size: 8pt;
+  font-size: 7.5pt;
   font-weight: 700;
-  color: var(--terracotta-dark);
+  color: var(--ink);
 }
 
 .doc-kicker {
-  font-size: 8pt;
-  letter-spacing: 0.14em;
+  font-size: 7.5pt;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   font-weight: 700;
   text-align: right;
@@ -73,7 +76,9 @@
 
 .doc-name {
   font-size: 20pt;
+  font-weight: 700;
   line-height: 1.02;
+  letter-spacing: -0.03em;
   margin: 0.5mm 0;
 }
 
@@ -83,16 +88,20 @@
 }
 
 .doc-client {
-  font-family: var(--serif);
+  font-family: var(--sans);
+  font-weight: 700;
   font-size: 13pt;
   margin-top: 1mm;
+  letter-spacing: -0.02em;
 }
 
 .doc-title {
-  font-family: var(--serif);
+  font-family: var(--sans);
+  font-weight: 700;
   font-size: 12.5pt;
+  letter-spacing: -0.02em;
   padding-bottom: 2.2mm;
-  border-bottom: 1px solid var(--rule);
+  border-bottom: 1px solid var(--ink);
 }
 
 .doc-triad {
@@ -114,23 +123,24 @@
 .doc-rider h2,
 .doc-sign h2 {
   font-family: var(--sans);
-  font-size: 8pt;
+  font-size: 7.5pt;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   font-weight: 700;
-  color: var(--ink-faint);
+  color: var(--ink);
   margin-bottom: 1.5mm;
 }
 
 .doc-lead {
-  font-family: var(--serif);
+  font-family: var(--sans);
+  font-weight: 700;
   font-size: 12pt;
   margin-bottom: 1mm;
   letter-spacing: -0.02em;
 }
 
 .doc-triad section:nth-child(2) .doc-lead {
-  color: var(--terracotta);
+  color: var(--ink);
   font-variant-numeric: tabular-nums;
 }
 
@@ -170,40 +180,32 @@
 }
 
 .doc-rider-name {
-  font-weight: 750;
+  font-weight: 700;
   font-size: 9.2pt;
 }
 
 .doc-rider-need {
   color: var(--ink-soft);
   font-size: 8pt;
+  font-weight: 300;
   margin-bottom: 1.2mm;
 }
 
 .doc-rider-ans {
-  font-weight: 650;
+  font-weight: 700;
   font-size: 8.6pt;
-}
-
-.doc-rider-ans.is-yes {
-  color: var(--forest);
-}
-
-.doc-rider-ans.is-arrange {
-  color: var(--amber);
-}
-
-.doc-rider-ans.is-no {
-  color: var(--no);
+  color: var(--ink);
 }
 
 .doc-rider-ans.is-empty {
   color: var(--ink-faint);
+  font-weight: 400;
 }
 
 .doc-extra {
   margin-top: 1.8mm;
   font-size: 8.6pt;
+  font-weight: 300;
 }
 
 .doc-sign,
@@ -217,6 +219,7 @@
 
 .doc-sign-lede {
   margin-bottom: 1.6mm;
+  font-weight: 300;
 }
 
 .doc-sign-grid {
@@ -228,7 +231,8 @@
 .sign-line {
   min-height: 6.5mm;
   border-bottom: 1px solid var(--ink);
-  font-family: var(--serif);
+  font-family: var(--sans);
+  font-weight: 700;
   font-size: 11pt;
   margin: 1mm 0 0.8mm;
 }
@@ -240,6 +244,7 @@
   justify-content: space-between;
   gap: 4mm;
   font-size: 8pt;
+  font-weight: 300;
   color: var(--ink-soft);
 }
 

@@ -31,6 +31,10 @@ npm run build # production build
 npm run preview
 ```
 
+## Type
+
+The UI is **Aileron** (Sora Sagano, CC0), self-hosted as woff2 under `public/fonts/` (light 300, regular 400, bold 700). `@font-face` lives in `src/styles/fonts.css`. Bold is for headlines, key labels, talent name, and the conforme title; regular/light for body.
+
 ## Routes
 
 | Path | Who |

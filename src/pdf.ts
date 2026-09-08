@@ -6,7 +6,7 @@ export async function downloadElementPdf(element: HTMLElement, filename: string)
   const canvas = await html2canvas(element, {
     scale: 2,
     useCORS: true,
-    backgroundColor: '#fbf7f0',
+    backgroundColor: '#ffffff',
     logging: false,
     windowWidth: element.scrollWidth,
     windowHeight: element.scrollHeight,

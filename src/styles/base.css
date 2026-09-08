@@ -29,12 +29,11 @@ body {
   margin: 0;
   font-family: var(--sans);
   font-size: 1.0625rem;
+  font-weight: 400;
   line-height: 1.5;
-  letter-spacing: 0.005em;
+  letter-spacing: 0;
   color: var(--ink);
-  background:
-    radial-gradient(1100px 460px at 8% -12%, var(--terracotta-wash), transparent 55%),
-    var(--paper);
+  background: var(--paper);
 }
 
 h1,
@@ -42,11 +41,18 @@ h2,
 h3,
 .wordmark,
 .doc-name,
-.brief-name {
-  font-family: var(--serif);
-  font-optical-sizing: auto;
-  font-weight: 580;
-  letter-spacing: -0.028em;
+.brief-name,
+.doc-brand,
+.doc-title,
+.doc-client,
+.doc-lead,
+.brief-num,
+.brief-brand,
+.client-banner-name,
+.sign-line {
+  font-family: var(--sans);
+  font-weight: 700;
+  letter-spacing: -0.02em;
   line-height: 1.12;
 }
 
@@ -58,11 +64,11 @@ p {
 }
 
 a {
-  color: var(--terracotta-dark);
+  color: var(--ink);
 }
 
 a:hover {
-  color: var(--ink);
+  text-decoration: underline;
 }
 
 :focus-visible {
@@ -77,7 +83,7 @@ a:hover {
   z-index: 20;
   padding: 0.4rem 0.7rem;
   background: var(--ink);
-  color: var(--paper-raised);
+  color: var(--paper);
 }
 
 .skip-link:focus {
@@ -85,20 +91,24 @@ a:hover {
 }
 
 .wordmark {
-  font-size: 1.62rem;
-  font-weight: 620;
+  font-size: 1.5rem;
+  font-weight: 700;
   color: var(--ink);
   text-decoration: none;
   line-height: 1;
   letter-spacing: -0.03em;
 }
 
+.wordmark:hover {
+  text-decoration: none;
+}
+
 .micro {
   display: block;
   font-family: var(--sans);
-  font-size: 0.7rem;
-  font-weight: 650;
-  letter-spacing: 0.12em;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--ink-faint);
 }
@@ -107,12 +117,12 @@ a:hover {
   display: inline-block;
   margin-right: 0.45rem;
   padding: 0.1rem 0.42rem 0.06rem;
-  border: 1px solid var(--terracotta);
-  background: var(--terracotta-wash);
-  color: var(--terracotta-dark);
-  font-size: 0.66rem;
+  border: 1px solid var(--ink);
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 0.64rem;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   vertical-align: 0.12em;
 }
@@ -124,42 +134,41 @@ a:hover {
   min-height: 2.65rem;
   padding: 0.42rem 1.05rem;
   border: 1px solid var(--ink);
-  background: var(--paper-raised);
+  background: var(--paper);
   color: var(--ink);
   font: inherit;
-  font-size: 0.98rem;
-  font-weight: 650;
-  letter-spacing: 0.01em;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
   text-decoration: none;
   cursor: pointer;
-  transition: background var(--ease), color var(--ease), border-color var(--ease);
+  transition: background var(--ease), color var(--ease);
 }
 
 .btn:hover {
   background: var(--ink);
-  color: var(--paper-raised);
-  border-color: var(--ink);
+  color: var(--paper);
+  text-decoration: none;
 }
 
 .btn-primary {
-  background: var(--terracotta);
-  border-color: var(--terracotta-dark);
-  color: #fffaf4;
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
 }
 
 .btn-primary:hover {
-  background: var(--terracotta-dark);
-  border-color: var(--ink);
-  color: #fffaf4;
+  background: var(--paper);
+  color: var(--ink);
 }
 
 .btn-ghost {
-  border-color: var(--rule);
-  background: var(--paper-raised);
+  background: var(--paper);
+  border-color: var(--ink);
 }
 
 .btn:disabled {
-  opacity: 0.55;
+  opacity: 0.45;
   cursor: not-allowed;
 }
 
@@ -169,8 +178,8 @@ a:hover {
 }
 
 .site-header {
-  border-bottom: var(--hair);
-  background: var(--paper-raised);
+  border-bottom: 1px solid var(--ink);
+  background: var(--paper);
 }
 
 .site-header-inner {
@@ -187,6 +196,7 @@ a:hover {
 .header-kicker {
   color: var(--ink-soft);
   font-size: 0.95rem;
+  font-weight: 400;
 }
 
 .header-nav {
@@ -197,12 +207,17 @@ a:hover {
 .header-nav a {
   color: var(--ink);
   text-decoration: none;
-  font-weight: 650;
-  letter-spacing: 0.01em;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.header-nav a:hover {
+  text-decoration: underline;
 }
 
 .header-nav a.active {
-  box-shadow: inset 0 -2px 0 var(--terracotta);
+  box-shadow: inset 0 -2px 0 var(--ink);
+  text-decoration: none;
 }
 
 .text-btn {
@@ -210,19 +225,19 @@ a:hover {
   background: transparent;
   padding: 0;
   font: inherit;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--ink);
   cursor: pointer;
   text-decoration: none;
 }
 
 .text-btn:hover {
-  color: var(--terracotta-dark);
+  text-decoration: underline;
 }
 
 .donate-dialog {
-  border: var(--hair);
-  background: var(--paper-raised);
+  border: 1px solid var(--ink);
+  background: var(--paper);
   color: var(--ink);
   padding: 0;
   max-width: 28rem;
@@ -232,7 +247,7 @@ a:hover {
 }
 
 .donate-dialog::backdrop {
-  background: rgba(28, 23, 20, 0.45);
+  background: rgba(0, 0, 0, 0.45);
 }
 
 .donate-dialog-inner {
@@ -240,12 +255,13 @@ a:hover {
 }
 
 .donate-dialog-inner h2 {
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   margin-bottom: 0.4rem;
 }
 
 .donate-lede {
   color: var(--ink-soft);
+  font-weight: 300;
   margin-bottom: 0.9rem;
 }
 
@@ -257,15 +273,15 @@ a:hover {
   display: block;
   width: 100%;
   height: auto;
-  border: var(--hair);
+  border: 1px solid var(--ink);
   background: var(--paper);
-  box-shadow: var(--shadow);
 }
 
 .donate-panel figcaption {
   margin-top: 0.7rem;
   color: var(--ink-soft);
   font-size: 0.98rem;
+  font-weight: 300;
 }
 
 .donate-page {
@@ -298,10 +314,11 @@ a:hover {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0.7rem 1.25rem;
-  color: var(--amber);
+  color: var(--ink-soft);
   font-size: 0.95rem;
 }
 
 .inline-note.is-ok {
-  color: var(--forest);
+  color: var(--ink);
+  font-weight: 700;
 }
