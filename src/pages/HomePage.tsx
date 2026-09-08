@@ -1,0 +1,75 @@
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { DonateModal } from '../components/DonateModal'
+import { hasSavedTalent } from '../storage'
+
+export function HomePage() {
+  const resume = hasSavedTalent()
+  const [donateOpen, setDonateOpen] = useState(false)
+
+  return (
+    <div className="home">
+      <a className="skip-link" href="#main">
+        Skip to content
+      </a>
+      <header className="home-top">
+        <p className="wordmark">Klaro</p>
+        <nav aria-label="Primary">
+          <Link to="/terms">Create terms</Link>
+          <Link to="/conforme?sample=1">Sample conforme</Link>
+          <button type="button" className="text-btn" onClick={() => setDonateOpen(true)}>
+            Donate
+          </button>
+        </nav>
+      </header>
+      <main id="main" className="home-hero">
+        <p className="eyebrow">Philippine production · booking + rider</p>
+        <h1>Everything in black and white.</h1>
+        <p className="home-lead">
+          Fee, hours, and rider — stated plainly. Production fills the job. The output is a one-page
+          conforme, before call time. Klaro is free.
+        </p>
+        <div className="home-cta">
+          <Link className="btn btn-primary" to="/terms?from=blank">
+            Create a booking
+          </Link>
+          <Link className="btn btn-ghost" to="/terms?from=sample">
+            Start from sample
+          </Link>
+          {resume ? (
+            <Link className="btn btn-ghost" to="/terms">
+              Continue last terms
+            </Link>
+          ) : null}
+        </div>
+        <div className="home-split">
+          <section>
+            <p className="micro">Talent</p>
+            <h2>You write the terms.</h2>
+            <p>
+              Name, role, ₱ fee, payment, overtime, day cap, and the rider: restroom, holding room, food,
+              water, assistant. Location and call time stay off this form — production fills those.
+            </p>
+          </section>
+          <section>
+            <p className="micro">Production</p>
+            <h2>You complete the booking.</h2>
+            <p>
+              Open the link. Add client name, title, city, venue, dates, call and wrap. Answer each rider
+              item in producer language: Yes / We’ll arrange / No. Then both sides conforme.
+            </p>
+          </section>
+        </div>
+        <p className="home-foot">
+          Inclusive by default. The rider is how bookings work here — not a special ask, not a diagnosis.
+        </p>
+        <p className="home-links">
+          <Link to="/c?sample=1">Try the sample as a client</Link>
+          <span aria-hidden="true">·</span>
+          <Link to="/conforme?sample=1">View sample conforme</Link>
+        </p>
+      </main>
+      <DonateModal open={donateOpen} onClose={() => setDonateOpen(false)} />
+    </div>
+  )
+}
