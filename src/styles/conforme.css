@@ -21,13 +21,14 @@
   overflow: hidden;
   background: var(--paper-raised);
   color: var(--ink);
-  box-shadow: var(--shadow);
+  border: var(--hair);
+  box-shadow: var(--shadow-sheet);
   padding: 10mm 12mm 8mm;
   display: flex;
   flex-direction: column;
-  gap: 3.6mm;
-  font-size: 9.3pt;
-  line-height: 1.25;
+  gap: 2.8mm;
+  font-size: 9.2pt;
+  line-height: 1.28;
 }
 
 .doc-top {
@@ -125,15 +126,21 @@
   font-family: var(--serif);
   font-size: 12pt;
   margin-bottom: 1mm;
+  letter-spacing: -0.02em;
+}
+
+.doc-triad section:nth-child(2) .doc-lead {
+  color: var(--terracotta);
+  font-variant-numeric: tabular-nums;
 }
 
 .doc-include {
   display: grid;
-  gap: 1.5mm;
+  gap: 1.2mm;
 }
 
 .doc-rider {
-  flex: 1;
+  flex: 0 1 auto;
   min-height: 0;
 }
 
@@ -195,8 +202,8 @@
 }
 
 .doc-extra {
-  margin-top: 2.5mm;
-  font-size: 8.8pt;
+  margin-top: 1.8mm;
+  font-size: 8.6pt;
 }
 
 .doc-sign,
@@ -204,8 +211,12 @@
   flex-shrink: 0;
 }
 
+.doc-sign {
+  margin-top: 1.2mm;
+}
+
 .doc-sign-lede {
-  margin-bottom: 2mm;
+  margin-bottom: 1.6mm;
 }
 
 .doc-sign-grid {

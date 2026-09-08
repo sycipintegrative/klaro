@@ -40,24 +40,28 @@
 }
 
 .eyebrow {
-  color: var(--terracotta-dark);
+  color: var(--terracotta);
+  font-size: 0.78rem;
   font-weight: 650;
-  letter-spacing: 0.04em;
-  margin-bottom: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.85rem;
 }
 
 .home-hero h1 {
-  font-size: clamp(2.2rem, 5vw, 3.6rem);
-  line-height: 1.08;
+  font-size: clamp(2.35rem, 5.2vw, 3.75rem);
+  line-height: 1.04;
+  letter-spacing: -0.032em;
   max-width: 16ch;
-  margin-bottom: 1rem;
+  margin-bottom: 1.05rem;
 }
 
 .home-lead {
-  max-width: 42rem;
-  font-size: 1.15rem;
+  max-width: 40rem;
+  font-size: 1.12rem;
+  line-height: 1.55;
   color: var(--ink-soft);
-  margin-bottom: 1.4rem;
+  margin-bottom: 1.5rem;
 }
 
 .home-cta {
@@ -70,18 +74,27 @@
 .home-split {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.25rem;
-  border-top: 1px solid var(--rule);
-  padding-top: 1.4rem;
+  gap: 1rem;
+  border-top: var(--hair);
+  padding-top: 1.5rem;
+}
+
+.home-split section {
+  background: var(--paper-raised);
+  border: var(--hair);
+  box-shadow: var(--shadow);
+  padding: 1.05rem 1.1rem 1.15rem;
 }
 
 .home-split h2 {
-  font-size: 1.45rem;
-  margin: 0.25rem 0 0.4rem;
+  font-size: 1.42rem;
+  margin: 0.2rem 0 0.45rem;
 }
 
 .home-split p:last-child {
   color: var(--ink-soft);
+  line-height: 1.5;
+  font-size: 1.02rem;
 }
 
 .home-foot {

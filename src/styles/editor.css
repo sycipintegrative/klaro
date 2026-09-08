@@ -21,25 +21,32 @@
 .section-nav a {
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
-  min-height: 2.4rem;
-  padding: 0.25rem 0.65rem;
-  color: var(--ink);
+  gap: 0.38rem;
+  min-height: 2.45rem;
+  padding: 0.28rem 0.72rem 0.22rem;
+  color: var(--ink-soft);
   text-decoration: none;
   border: 1px solid transparent;
-  font-weight: 600;
-  font-size: 0.95rem;
+  border-bottom: 1px solid var(--rule);
+  font-weight: 650;
+  font-size: 0.93rem;
+  letter-spacing: 0.01em;
+  transition: background var(--ease), border-color var(--ease), color var(--ease);
 }
 
 .section-nav a.is-active {
-  border-color: var(--ink);
+  color: var(--ink);
   background: var(--paper-raised);
+  border-color: var(--rule);
+  border-bottom-color: var(--terracotta);
+  box-shadow: var(--shadow);
 }
 
 .section-nav-num {
   color: var(--terracotta);
-  font-size: 0.72rem;
-  letter-spacing: 0.08em;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  font-weight: 700;
 }
 
 .editor-actions {
@@ -65,16 +72,18 @@
 .pane-toggle button {
   min-height: 2.5rem;
   padding: 0.3rem 0.8rem;
-  border: 1px solid var(--rule);
-  background: transparent;
+  border: var(--hair);
+  background: var(--paper-raised);
   font: inherit;
-  font-weight: 600;
+  font-weight: 650;
   cursor: pointer;
 }
 
 .pane-toggle button[aria-selected='true'] {
-  border-color: var(--ink);
+  border-color: var(--rule);
+  border-bottom: 2px solid var(--terracotta);
   background: var(--paper-raised);
+  box-shadow: var(--shadow);
 }
 
 .editor-grid {
@@ -104,28 +113,32 @@
 
 .form-section {
   scroll-margin-top: 1rem;
-  padding: 1.15rem 1.15rem 1.3rem;
+  padding: 1.1rem 1.15rem 1.2rem;
   background: var(--paper-raised);
-  border: 1px solid var(--rule);
+  border: var(--hair);
+  box-shadow: var(--shadow);
 }
 
 .form-section h2 {
-  font-size: 1.55rem;
-  margin-bottom: 0.25rem;
+  font-size: 1.48rem;
+  margin-bottom: 0.2rem;
 }
 
 .form-section h2 span {
   color: var(--terracotta);
   font-family: var(--sans);
-  font-size: 0.78rem;
-  letter-spacing: 0.12em;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  font-weight: 700;
   margin-right: 0.45rem;
 }
 
 .lede {
   color: var(--ink-soft);
-  margin-bottom: 1rem;
+  margin-bottom: 0.95rem;
   max-width: 40rem;
+  line-height: 1.45;
+  font-size: 1rem;
 }
 
 .grid-2 {
@@ -146,22 +159,25 @@
   display: block;
   float: none;
   font-weight: 650;
-  margin-bottom: 0.3rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  margin-bottom: 0.38rem;
   padding: 0;
 }
 
 .field-hint {
-  margin: 0.3rem 0 0;
+  margin: 0.28rem 0 0;
   color: var(--ink-faint);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
+  line-height: 1.4;
 }
 
 .input {
   width: 100%;
   min-height: 2.7rem;
-  padding: 0.45rem 0.65rem;
-  border: 1px solid #c9bba8;
-  background: #fffcf7;
+  padding: 0.45rem 0.7rem;
+  border: var(--hair);
+  background: var(--input);
   color: var(--ink);
   font: inherit;
   border-radius: var(--radius);
@@ -170,6 +186,7 @@
 .input-area {
   min-height: 4.8rem;
   resize: vertical;
+  line-height: 1.45;
 }
 
 .input:hover,
@@ -180,17 +197,19 @@
 .radio-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
+  align-items: stretch;
+  gap: 0.38rem;
 }
 
 .radio-card {
-  display: flex;
+  display: inline-flex;
+  flex: 1 1 7.5rem;
   flex-direction: column;
   justify-content: center;
-  min-height: 2.7rem;
-  padding: 0.4rem 0.7rem;
-  border: 1px solid var(--rule);
-  background: #fffcf7;
+  min-height: 2.75rem;
+  padding: 0.42rem 0.75rem;
+  border: var(--hair);
+  background: var(--input);
   cursor: pointer;
 }
 
@@ -208,17 +227,23 @@
 
 .radio-card-label {
   font-weight: 650;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
+  line-height: 1.25;
 }
 
 .radio-card-hint {
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   opacity: 0.8;
 }
 
 .money-live {
-  margin: -0.3rem 0 0.9rem;
+  margin: -0.2rem 0 0.9rem;
   font-weight: 600;
+}
+
+.money-live strong {
+  color: var(--terracotta);
+  font-variant-numeric: tabular-nums;
 }
 
 .rider-q {
@@ -255,9 +280,10 @@
   gap: 0.8rem 1.5rem;
   max-width: 1200px;
   margin: 0.85rem auto 0;
-  padding: 0.9rem 1.15rem;
+  padding: 0.95rem 1.2rem;
   background: var(--ink);
   color: var(--paper-raised);
+  box-shadow: var(--shadow);
 }
 
 .client-banner-name {
@@ -307,8 +333,8 @@
 
 .brief-doc {
   background: var(--paper-raised);
-  border: 1px solid var(--rule);
-  box-shadow: var(--shadow);
+  border: var(--hair);
+  box-shadow: var(--shadow-sheet);
   padding: 1.15rem 1.2rem 1.3rem;
 }
 
@@ -354,7 +380,10 @@
 
 .brief-num {
   font-family: var(--serif);
-  font-size: 1.25rem;
+  font-size: 1.28rem;
+  color: var(--terracotta);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
 }
 
 .brief-include {
